@@ -1,0 +1,42 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form select, form input, form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.car-list div {
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+}
+
+.car-list img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .car-list div {
+    width: 100%;
+  }
+}
