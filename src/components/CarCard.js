@@ -1,9 +1,16 @@
 import React from "react";
 import { Card, CardMedia, CardContent, Typography } from "@mui/material";
 
-const CarCard = ({ car }) => {
+const CarCard = ({ car, onBook, isBooked, isSelected }) => {
   return (
-    <Card sx={{ maxWidth: 345, m: 2 }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        m: 2,
+        border: isBooked ? "2px solid green" : "none",
+        boxShadow: isSelected ? 3 : 1,
+      }}
+    >
       <CardMedia
         component="img"
         height="200"
@@ -18,6 +25,9 @@ const CarCard = ({ car }) => {
         <Typography variant="h6" color="primary">
           {car.price}
         </Typography>
+        <button onClick={() => onBook(car)} disabled={isBooked}>
+          {isBooked ? "Booked" : isSelected ? "Selected" : "Select"}
+        </button>
       </CardContent>
     </Card>
   );

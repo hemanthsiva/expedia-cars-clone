@@ -45,7 +45,7 @@ const App = () => {
   return (
     <Container>
       <Typography variant="h4" align="center" sx={{ mt: 4, mb: 2 }}>
-        MIY Cars 🚗
+        Expedia Cars Clone 🚗
       </Typography>
 
       <SearchBar
